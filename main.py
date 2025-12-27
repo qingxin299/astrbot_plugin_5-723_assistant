@@ -7,7 +7,7 @@ from pathlib import Path
 import re
 from .randomFood import *
 
-plugin_data_path:Path = get_astrbot_data_path() / "plugin_data" / self.name
+plugin_data_path:Path = get_astrbot_data_path()
 @register("5-723_assistant", "qing_xin", "一个简单的个人bot插件，致力于贝壳便捷生活", "0.0.1")
 class MyPlugin(Star):
     def __init__(self, context: Context):
