@@ -15,7 +15,6 @@ class MyPlugin(Star):
 
     async def initialize(self):
         """可选择实现异步的插件初始化方法，当实例化该插件类之后会自动调用该方法。"""
-        logger.info(f"数据路径：{plugin_data_path}")
         #从文件读取有关的食物信息
         try:
             with open(plugin_data_path / 'randomFood.txt','r', encoding='utf-8') as f:
@@ -34,6 +33,7 @@ class MyPlugin(Star):
         message_str = event.message_str # 用户发的纯文本消息字符串
         message_chain = event.get_messages() # 用户所发的消息的消息链 # from astrbot.api.message_components import *
         logger.info(message_chain)
+        logger.info(f"数据路径：{plugin_data_path}")
         yield event.plain_result(f"pong!") # 发送一条纯文本消息
 
     async def terminate(self):
