@@ -15,7 +15,7 @@ class MyPlugin(Star):
 
     async def initialize(self):
         """可选择实现异步的插件初始化方法，当实例化该插件类之后会自动调用该方法。"""
-        
+        logger.info(f"数据路径：{plugin_data_path}")
         #从文件读取有关的食物信息
         try:
             with open(plugin_data_path / 'randomFood.txt','r', encoding='utf-8') as f:
