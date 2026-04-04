@@ -1,8 +1,6 @@
-# helloworld
+# 5-723小助手插件
 
-AstrBot 插件模板
-
-A template plugin for AstrBot plugin feature
+AstrBot 个人插件
 
 # 支持
 
